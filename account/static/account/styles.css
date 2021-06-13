@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles go here */
+h1 {
+    font-family: 'Days One', sans-serif;
+    font-size: 45px;
+}
+.wave {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}

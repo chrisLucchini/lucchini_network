@@ -1,0 +1,9 @@
+{% load static %}
+{% csrf_token %}
+<h1>PROFILE</h1>
+<p>Nom: {{user.last_name}}</p>
+<p>Prénom: {{user.first_name}}</p>
+<p>Pseudo: {{user.username}}</p>
+<a href="{% url 'account:logout' %}"><button>
+Logout
+</button></a>

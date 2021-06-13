@@ -1,0 +1,19 @@
+{
+  "name": "lucchini_network",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "postcss account/**/*.css -d static/tailwind --watch",
+    "build": "postcss {account,}/**/*.css -d static/tailwind --env production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.2"
+  }
+}

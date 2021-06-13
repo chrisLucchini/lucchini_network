@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="static/tailwind/tailwind.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profil</title>
+    </head>
+    <body>
+        <header>
+            <nav class="bg-indigo-700 w-full h-20 px-5 flex fixed top-0 left-0">
+                <div class="flex justify-start items-center flex-grow">
+                    <div class="w-12 h-12 rounded-full bg-white">
+                    </div>
+                    <div class="px-8">
+                        <div class="bg-white flex items-center rounded-full w-60">
+                            <input class="rounded-l-full w-full py-4 px-6 text-gray-700 focus:outline-none" id="search" type="text" placeholder="Search">
+                            <div class="p-4">
+                                <button class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none flex items-center justify-center">
+                                    icon
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center flex-shrink">
+                    <div class="p-8">
+                        <i class="fas fa-poll-h fa-3x"></i>
+                    </div>
+                    <div class="p-8">
+                        <i class="fas fa-user-friends fa-3x"></i>
+                    </div>
+                    <div class="p-8">
+                        <i class="fas fa-bell fa-3x"></i>
+                    </div>
+                    <div class="p-8">
+                        <i class="fas fa-user-circle fa-3x"></i>
+                    </div>
+                </div>
+                <div class="flex justify-end items-center flex-grow">
+                    <div class="p-8">
+                        <i class="fas fa-envelope fa-3x"></i>
+                    </div>
+                    <div class="p-8">
+                        <i class="fas fa-bars fa-3x"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container w-9/12 mx-auto mt-32 border-solid border-4 border-light-blue-500 bg-gray-100">
+            <div class="flex justify-between items-end">
+                <div class="w-32 h-32 rounded-full bg-black">
+                </div>
+                <div class="w-32">
+                    <button class="w-2/4 flex justify-center w-full mt-8 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Edit profile
+                    </button>
+                </div>
+            </div>
+            <div class="p-8">
+                <div>
+                Nom Prenom
+                </div>
+                <div>
+                A rejoint le réseau le 15 mai 2021
+                </div>
+                <div>
+                7 publications
+                </div>
+            </div>
+            <div class="w-11/12 mx-auto bg-white p-2">
+                <div class="mb-8">
+                    <div class="w-8 h-8 rounded-full bg-black">
+                    </div>
+                    <form>
+                        <label for="post" class="text-xs text-gray-500">Que voulez vous dire ?</label>
+                        <input id="post" class="bg-transparent border-b m-auto block border-gray-500 w-full mb-6 text-gray-700 pb-1" type="text"
+                            placeholder=""/>
+                        <input class="shadow-lg pt-3 pb-3 w-full text-white bg-indigo-500 hover:bg-indigo-400 rounded-full cursor-pointer "
+                            type="submit" value="Publier">
+                    </form>
+                </div>
+                <div class="bg-gray-200 m-3 p-6">
+                    <div class="flex">
+                        <div class="w-10 h-10 rounded-full bg-black">
+                        </div>
+                        <div>
+                            <div class="px-2">
+                            Nom Prenom
+                            </div>
+                            <div class="px-2 text-xs">
+                            Il y a 10min
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quos, maxime odit repellat esse possimus quo necessitatibus optio aspernatur voluptate, laudantium aliquid autem quisquam. Esse iste pariatur dolorem animi nulla.
+                    </div>
+                </div>
+                <div class="bg-gray-200 m-3 p-6">
+                    <div class="flex">
+                        <div class="w-10 h-10 rounded-full bg-black">
+                        </div>
+                        <div>
+                            <div class="px-2">
+                            Nom Prenom
+                            </div>
+                            <div class="px-2 text-xs">
+                            Il y a 10min
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, quos, maxime odit repellat esse possimus quo necessitatibus optio aspernatur voluptate, laudantium aliquid autem quisquam. Esse iste pariatur dolorem animi nulla.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>

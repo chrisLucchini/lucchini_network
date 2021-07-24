@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm
+from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Profile
@@ -7,7 +8,7 @@ from common.settings import NETWORK_USER_CUSTOM_FIELDS
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
 
 
-class SignInForm(ModelForm):
+class SignInForm(forms.Form):
     username = forms.CharField(label='Pseudo',
                                widget=forms.TextInput(attrs={
                                    'class': "appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm",
@@ -20,9 +21,23 @@ class SignInForm(ModelForm):
                                    'placeholder': 'Mot de passe'
                                })
                                )
-    class Meta:
-        model = Profile
-        fields = ('username', 'password')
+    
+    def clean(self):
+        super(SignInForm, self).clean()
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        if not user or not user.is_active:
+            print(user)
+            raise forms.ValidationError("Login ou mot de passe incorrect")
+        return self.cleaned_data
+
+    def login(self, request):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        return user
+
 
 
 class SignUpForm(ModelForm):
